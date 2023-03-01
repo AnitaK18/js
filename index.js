@@ -5,12 +5,12 @@ const result = document.querySelector('#result'),
       equals = document.querySelector('.equals'),
       clear = document.querySelector('#clear'),
       ce = document.querySelector('#ce');
-let ex = ''; // the expression string to be eval'd
+let ex = '';
 result.innerHTML = '0';
 
 
 
-function clickN() { // when we click on a number
+function clickN() { 
   if(!ex || typeof(ex) === 'number' || ex === '0') {
     expression.innerHTML = this.id;
     ex = this.id;
@@ -22,7 +22,7 @@ function clickN() { // when we click on a number
   checkLength(result.innerHTML);
 };
 
-function clickO() { // when we click on an operation
+function clickO() { 
   if(!ex) {
     return;
   }
@@ -37,7 +37,7 @@ function clickO() { // when we click on an operation
 
 
 
-Array.from(num).forEach(function(element) { // assign appropriate function to all numbers and operations
+Array.from(num).forEach(function(element) {
       element.addEventListener('click', clickN);
     });
 
